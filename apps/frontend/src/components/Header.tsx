@@ -3,9 +3,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { 
   Bell, Search, Menu, User, Moon, Sun, Monitor, Package, Users, 
   FileText, Wrench, X, Loader2, ChevronRight, Command, Settings, 
-  LogOut, HelpCircle, ChevronDown, Crown
+  LogOut, HelpCircle, ChevronDown, Crown, Plus, Maximize, Minimize,
+  Receipt, UserPlus, ShoppingCart, ClipboardList
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { api } from '../services/api'; 
 import { useAuth } from '../context/AuthContext';
@@ -30,8 +31,17 @@ interface SearchResult {
   url: string;
 }
 
+interface QuickAction {
+  label: string;
+  icon: React.ElementType;
+  path: string;
+  color: string;
+  module?: ModuleType;
+}
+
 const Header: React.FC<HeaderProps> = ({ toggleSidebar, user }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { theme, setTheme, resolvedTheme } = useTheme();
   const { logout, user: authUser } = useAuth();
   
@@ -46,10 +56,45 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, user }) => {
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const userMenuRef = useRef<HTMLDivElement>(null);
 
+  // Quick Actions Dropdown State
+  const [isQuickActionsOpen, setIsQuickActionsOpen] = useState(false);
+  const quickActionsRef = useRef<HTMLDivElement>(null);
+
+  // Fullscreen State
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  // Quick Actions List
+  const quickActions: QuickAction[] = [
+    { label: 'Yeni Müşteri', icon: UserPlus, path: '/accounts?new=customer', color: 'text-blue-500', module: 'finance' },
+    { label: 'Yeni Ürün', icon: Package, path: '/inventory?new=product', color: 'text-purple-500', module: 'inventory' },
+    { label: 'Yeni Fatura', icon: Receipt, path: '/invoices?new=invoice', color: 'text-green-500', module: 'finance' },
+    { label: 'Yeni Teklif', icon: ClipboardList, path: '/offers?new=offer', color: 'text-orange-500', module: 'sales' },
+    { label: 'Yeni Servis', icon: Wrench, path: '/services?new=service', color: 'text-red-500', module: 'service' },
+  ];
+
   const toggleTheme = () => {
     if (theme === 'light') setTheme('dark');
     else setTheme('light');
   };
+
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+      setIsFullscreen(true);
+    } else {
+      document.exitFullscreen();
+      setIsFullscreen(false);
+    }
+  };
+
+  // Listen for fullscreen changes
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -59,6 +104,9 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, user }) => {
       }
       if (userMenuRef.current && !userMenuRef.current.contains(event.target as Node)) {
         setIsUserMenuOpen(false);
+      }
+      if (quickActionsRef.current && !quickActionsRef.current.contains(event.target as Node)) {
+        setIsQuickActionsOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -158,6 +206,11 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, user }) => {
     navigate('/login');
   };
 
+  const handleQuickAction = (path: string) => {
+    navigate(path);
+    setIsQuickActionsOpen(false);
+  };
+
   const getIcon = (type: string) => {
     switch(type) {
       case 'account': return <Users size={16} className="text-blue-500" />;
@@ -168,17 +221,73 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, user }) => {
     }
   };
 
+  // Get page title for breadcrumb
+  const getPageTitle = () => {
+    const pathMap: Record<string, string> = {
+      '/': 'Dashboard',
+      '/dashboard': 'Dashboard',
+      '/accounts': 'Cariler',
+      '/inventory': 'Stok',
+      '/invoices': 'Faturalar',
+      '/offers': 'Teklifler',
+      '/services': 'Servis',
+      '/finance': 'Finans',
+      '/reports': 'Raporlar',
+      '/settings': 'Ayarlar',
+      '/notifications': 'Bildirimler',
+      '/hr': 'İnsan Kaynakları',
+      '/pos': 'POS',
+      '/projects': 'Projeler',
+      '/todo': 'Görevler',
+    };
+    return pathMap[location.pathname] || 'Sayfa';
+  };
+
   return (
     <header className="h-16 bg-white dark:bg-[#0B1120] border-b border-gray-200 dark:border-slate-800 shadow-sm flex items-center justify-between px-4 lg:px-6 sticky top-0 z-40 transition-colors duration-200 relative">
       
-      {/* Left: Mobile Toggle */}
-      <div className="flex items-center w-20">
+      {/* Left: Mobile Toggle + Quick Actions */}
+      <div className="flex items-center gap-2">
         <button 
           onClick={toggleSidebar}
           className="p-2 rounded-md text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-slate-800 lg:hidden"
         >
           <Menu size={20} />
         </button>
+
+        {/* Quick Actions Button */}
+        <div className="relative" ref={quickActionsRef}>
+          <button 
+            onClick={() => setIsQuickActionsOpen(!isQuickActionsOpen)}
+            className="flex items-center gap-1.5 px-3 py-2 bg-brand-500 hover:bg-brand-600 text-white rounded-lg text-sm font-medium shadow-sm hover:shadow transition-all"
+          >
+            <Plus size={16} />
+            <span className="hidden sm:inline">Yeni</span>
+          </button>
+
+          {isQuickActionsOpen && (
+            <div className="absolute left-0 top-full mt-2 w-52 bg-white dark:bg-enterprise-800 rounded-xl shadow-2xl border border-gray-200 dark:border-slate-700 py-2 z-50 animate-fade-in-down origin-top-left">
+              <div className="px-3 py-1.5 text-[10px] font-bold text-gray-400 uppercase tracking-wider">Hızlı İşlemler</div>
+              {quickActions.filter(a => !a.module || hasAccess(a.module)).map((action, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleQuickAction(action.path)}
+                  className="w-full text-left px-3 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700 flex items-center gap-3 transition-colors"
+                >
+                  <action.icon size={18} className={action.color} />
+                  {action.label}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Breadcrumb - Hidden on Mobile */}
+        <div className="hidden lg:flex items-center gap-2 ml-4 text-sm">
+          <span className="text-gray-400 dark:text-slate-500">Ana Sayfa</span>
+          <ChevronRight size={14} className="text-gray-300 dark:text-slate-600" />
+          <span className="text-gray-700 dark:text-slate-200 font-medium">{getPageTitle()}</span>
+        </div>
       </div>
       
       {/* Center: Global Search Bar - Absolutely Positioned for true center */}
@@ -244,7 +353,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, user }) => {
       </div>
 
       {/* Right: Actions & Profile */}
-      <div className="flex items-center gap-2 sm:gap-4 ml-auto">
+      <div className="flex items-center gap-2 sm:gap-3 ml-auto">
         
         {authUser?.role === 'superuser' && (
           <button 
@@ -258,6 +367,15 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, user }) => {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-1">
+          {/* Fullscreen Toggle */}
+          <button 
+            onClick={toggleFullscreen}
+            className="p-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-slate-800/80 rounded-lg transition-colors hidden sm:block"
+            title={isFullscreen ? 'Tam Ekrandan Çık' : 'Tam Ekran'}
+          >
+            {isFullscreen ? <Minimize size={20} /> : <Maximize size={20} />}
+          </button>
+
           <button 
             onClick={toggleTheme}
             className="p-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-slate-800/80 rounded-lg transition-colors"

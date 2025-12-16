@@ -46,6 +46,8 @@ import Packages from './pages/super-admin/Packages';
 import Tickets from './pages/super-admin/Support';
 import SuperAdminUsers from './pages/super-admin/Users';
 import UserRoles from './pages/super-admin/UserGroups';
+import SuperAdminProfile from './pages/super-admin/Profile';
+import SystemSettings from './pages/super-admin/SystemSettings';
 
 
 // Layout Component for Authenticated Routes
@@ -182,7 +184,8 @@ const AppRoutes: React.FC = () => {
          <Route path="tenants" element={<Tenants />} />
          <Route path="packages" element={<Packages />} />
          <Route path="tickets" element={<Tickets />} />
-         <Route path="settings" element={<div>Ayarlar (Yapım Aşamasında)</div>} />
+         <Route path="profile" element={<SuperAdminProfile />} />
+         <Route path="settings" element={<SystemSettings />} />
       </Route>
 
       {/* Root redirects to landing if not auth, else dashboard */}

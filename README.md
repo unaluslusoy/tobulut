@@ -1,20 +1,97 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# ToBulut - Kurumsal Kaynak Planlama (ERP) & CRM Platformu
 
-# Run and deploy your AI Studio app
+**ToBulut**, işletmelerin tüm süreçlerini tek bir merkezden yönetmelerini sağlayan modern, bulut tabanlı ve modüler bir ERP sistemidir. Finans, Stok, İK, Satış ve Müşteri İlişkileri yönetimini yapay zeka destekli araçlarla birleştirir.
 
-This contains everything you need to run your app locally.
+![Tasarım Önizleme](https://via.placeholder.com/1200x500.png?text=ToBulut+Dashboard+Preview)
 
-View your app in AI Studio: https://ai.studio/apps/drive/1dbO7gjtj3PFqk5m3QSlTi4SkzR22tnsh
+## 🚀 Özellikler
 
-## Run Locally
+### 👥 Müşteri İlişkileri (CRM)
+- Detaylı müşteri profilleri ve etkileşim takibi
+- Satış fırsatları ve teklif yönetimi
+- Müşteri bazlı özel fiyatlandırma ve iskontolar
 
-**Prerequisites:**  Node.js
+### 💰 Finans & Muhasebe
+- Gelir/Gider takibi ve nakit akışı yönetimi
+- Fatura, irsaliye ve makbuz oluşturma
+- Banka entegrasyonları ve kasa takibi
 
+### 📦 Stok & Depo Yönetimi
+- Çoklu depo desteği
+- Kritik stok uyarıları ve otomatik sipariş önerileri
+- Barkodlu giriş/çıkış işlemleri
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 📝 Dosya Yöneticisi
+- Sürükle-bırak destekli gelişmiş dosya yönetimi
+- Klasör ağacı yapısı (Tree view)
+- Detaylı ve Izgara (Grid) görünüm seçenekleri
+- Yetkilendirilmiş erişim kontrolü
+
+### 🛡️ Güvenlik & Yetkilendirme
+- Rol tabanlı erişim kontrolü (RBAC) - Admin, Personel, Muhasebeci vb.
+- İki faktörlü kimlik doğrulama (2FA - Email & WhatsApp)
+- Güvenli oturum yönetimi ve loglama
+
+## 🛠 Teknoloji Yığını
+
+**Frontend:**
+- **React.js** (Vite ile)
+- **TypeScript** - Tip güvenliği için
+- **Tailwind CSS** - Modern stillendirme
+- **Recharts** - Veri görselleştirme
+- **Lucide React** - Modern ikon seti
+
+**Backend:**
+- **NestJS** - Scalable Node.js framework
+- **MongoDB** - Esnek doküman tabanlı veritabanı
+- **JWT** - Güvenli kimlik doğrulama
+
+## 🔧 Kurulum ve Çalıştırma
+
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
+
+### Gereksinimler
+- Node.js (v18+)
+- MongoDB (Yerel veya Atlas URI)
+
+### Adımlar
+
+1. **Depoyu klonlayın:**
+   ```bash
+   git clone https://github.com/unaluslusoy/tobulut.git
+   cd tobulut
+   ```
+
+2. **Bağımlılıkları yükleyin (Root dizinde):**
+   ```bash
+   npm install
+   ```
+
+3. **Çevresel Değişkenleri Ayarlayın:**
+   - `apps/backend` ve `apps/frontend` klasörlerindeki `.env.example` dosyalarını `.env` olarak kopyalayın ve gerekli değerleri girin.
+
+4. **Geliştirme Sunucusunu Başlatın:**
+   
+   Backend için:
+   ```bash
+   cd apps/backend
+   npm run start:dev
+   ```
+
+   Frontend için:
+   ```bash
+   cd apps/frontend
+   npm run dev
+   ```
+
+## 🤝 Katkıda Bulunma
+
+1. Bu depoyu Forklayın
+2. Yeni bir feature branch oluşturun (`git checkout -b feature/HarikaOzellik`)
+3. Değişikliklerinizi commit edin (`git commit -m 'feat: Harika özellik eklendi'`)
+4. Branch'inizi pushlayın (`git push origin feature/HarikaOzellik`)
+5. Bir Pull Request oluşturun
+
+## 📄 Lisans
+
+Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.

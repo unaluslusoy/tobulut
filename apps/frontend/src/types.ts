@@ -29,15 +29,19 @@ export interface SubscriptionPackage {
 export interface Tenant {
   id: string;
   name: string;
-  domain?: string; // e.g., firma.toplus.app
+  type?: 'corporate' | 'individual';
+  domain?: string;
   taxNumber?: string;
-  contactEmail: string;
+  contactEmail?: string;
   contactPhone?: string;
-  subscriptionPlanId: string;
-  subscriptionStatus: 'active' | 'trial' | 'expired' | 'cancelled';
-  subscriptionEndDate: string;
+  subscriptionPlanId?: string;
+  subscriptionPackage?: SubscriptionPackage;
+  status: 'active' | 'inactive' | 'suspended';
+  subscriptionStart?: string;
+  subscriptionEnd?: string;
   createdAt: string;
-  adminUserId: string; // The main admin of this tenant
+  tag?: string;
+  _count?: { users: number };
 }
 
 export interface SaaSPayment {

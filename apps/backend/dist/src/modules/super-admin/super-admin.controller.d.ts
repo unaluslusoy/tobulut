@@ -202,11 +202,11 @@ export declare class SuperAdminController {
         status: import(".prisma/client").$Enums.TicketStatus;
         createdAt: Date;
         updatedAt: Date;
-        subject: string;
-        priority: import(".prisma/client").$Enums.TicketPriority;
         userId: string;
+        subject: string;
         message: string;
         category: string;
+        priority: import(".prisma/client").$Enums.TicketPriority;
     })[]>;
     updateTicket(id: string, data: any): Promise<{
         id: string;
@@ -214,11 +214,11 @@ export declare class SuperAdminController {
         status: import(".prisma/client").$Enums.TicketStatus;
         createdAt: Date;
         updatedAt: Date;
-        subject: string;
-        priority: import(".prisma/client").$Enums.TicketPriority;
         userId: string;
+        subject: string;
         message: string;
         category: string;
+        priority: import(".prisma/client").$Enums.TicketPriority;
     }>;
     getRoles(): Promise<({
         _count: {
