@@ -1,0 +1,355 @@
+
+import { PrismaClient } from '@prisma/client';
+import * as bcrypt from 'bcrypt';
+
+const prisma = new PrismaClient();
+
+const data = {
+  "packages": [
+    {
+      "id": "pkg_starter",
+      "name": "Başlangıç Paketi",
+      "priceMonthly": 199,
+      "maxUsers": 3,
+      "limits": { "storage": "5GB" },
+      "createdAt": new Date()
+    },
+    {
+      "id": "pkg_pro",
+      "name": "Profesyonel Paket",
+      "priceMonthly": 399,
+      "maxUsers": 10,
+      "limits": { "storage": "50GB" },
+      "createdAt": new Date()
+    }
+  ],
+  "tenants": [
+    {
+      "id": "tenant_demo_1",
+      "name": "ToDestek Bilişim",
+      "subscriptionPlanId": "pkg_pro",
+      "status": "active"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr_admin_1",
+      "tenantId": "tenant_demo_1",
+      "name": "Ünal Uslusoy (Yönetici)",
+      "email": "unaluslusoy@todestek.net",
+      "passwordHash": "hashed_password123", // In real app, hash this!
+      "role": "admin",
+      "permissions": {}
+    },
+    {
+      "id": "usr_accountant_1",
+      "tenantId": "tenant_demo_1",
+      "name": "Zeynep Kaya (Muhasebe)",
+      "email": "zeynep@todestek.com",
+      "passwordHash": "hashed_password123",
+      "role": "accountant",
+      "permissions": {}
+    },
+    {
+      "id": "usr_tech_1",
+      "tenantId": "tenant_demo_1",
+      "name": "Ali Veli (Tekniker)",
+      "email": "ali@todestek.com",
+      "passwordHash": "hashed_password123",
+      "role": "technician",
+      "permissions": {}
+    }
+  ],
+  "accounts": [
+    {
+      "id": "acc_cust_1",
+      "tenantId": "tenant_demo_1",
+      "accountCode": "120.01.001",
+      "type": "customer",
+      "name": "Mega İnşaat Ltd. Şti.",
+      "balance": 15400.00
+    },
+    {
+      "id": "acc_supp_1",
+      "tenantId": "tenant_demo_1",
+      "accountCode": "320.01.005",
+      "type": "supplier",
+      "name": "TeknoTedarik A.Ş.",
+      "balance": -45000.00
+    }
+  ],
+  "products": [
+    {
+      "id": "prd_1",
+      "tenantId": "tenant_demo_1",
+      "code": "LT-2024",
+      "name": "Laptop Pro X1 - i7 16GB",
+      "stockQuantity": 12,
+      "priceSell": 24500.00,
+      "trackStock": true
+    },
+    {
+      "id": "prd_2",
+      "tenantId": "tenant_demo_1",
+      "code": "MS-500",
+      "name": "Kablosuz Mouse",
+      "stockQuantity": 85,
+      "priceSell": 450.00,
+      "trackStock": true
+    },
+    {
+      "id": "prd_srv_1",
+      "tenantId": "tenant_demo_1",
+      "code": "SRV-FORMAT",
+      "name": "Format ve Kurulum Hizmeti",
+      "stockQuantity": 9999,
+      "priceSell": 750.00,
+      "trackStock": false
+    }
+  ],
+  "cashRegisters": [
+    {
+      "id": "reg_main_tl",
+      "tenantId": "tenant_demo_1",
+      "name": "Merkez Kasa (TL)",
+      "currency": "TRY",
+      "balance": 12500.50
+    },
+    {
+      "id": "reg_bank_garanti",
+      "tenantId": "tenant_demo_1",
+      "name": "Garanti Bankası",
+      "currency": "TRY",
+      "balance": 154000.00
+    }
+  ],
+  "invoices": [
+    {
+      "id": "inv_1",
+      "tenantId": "tenant_demo_1",
+      "accountId": "acc_cust_1",
+      "type": "sales",
+      "status": "paid",
+      "totalAmount": 58800.00,
+      "items": [
+        {
+          "productId": "prd_1",
+          "name": "Laptop Pro X1 - i7 16GB",
+          "quantity": 2,
+          "price": 24500.00,
+          "total": 49000.00
+        }
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "id": "trx_1",
+      "tenantId": "tenant_demo_1",
+      "registerId": "reg_bank_garanti",
+      "accountId": "acc_cust_1",
+      "type": "income",
+      "amount": 58800.00,
+      "description": "Fatura Tahsilatı - GIB2024000001",
+      "invoiceId": "inv_1"
+    },
+    {
+      "id": "trx_2",
+      "tenantId": "tenant_demo_1",
+      "registerId": "reg_main_tl",
+      "type": "expense",
+      "amount": 450.00,
+      "description": "Ofis Kırtasiye Gideri"
+    }
+  ],
+  "serviceTickets": [
+    {
+      "id": "srv_1",
+      "tenantId": "tenant_demo_1",
+      "customerId": "acc_cust_1",
+      "technicianId": null, // Can link to employee later if needed
+      "deviceInfo": { "device": "HP Plotter T200", "issue": "Kağıt sıkıştırıyor, baskı kafası temizliği gerekli." },
+      "status": "processing",
+      "estimatedCost": 1500.00
+    }
+  ]
+};
+
+async function main() {
+  console.log('Start seeding ...');
+
+  // Packages
+  for (const pkg of data.packages) {
+    await prisma.subscriptionPackage.upsert({
+      where: { id: pkg.id },
+      update: {},
+      create: {
+        id: pkg.id,
+        name: pkg.name,
+        priceMonthly: pkg.priceMonthly,
+        limits: pkg.limits
+      },
+    });
+  }
+
+  // Tenants
+  for (const t of data.tenants) {
+    await prisma.tenant.upsert({
+      where: { id: t.id },
+      update: {
+          name: t.name
+      },
+      create: {
+        id: t.id,
+        name: t.name,
+        subscriptionPlanId: t.subscriptionPlanId,
+        status: 'active'
+      },
+    });
+  }
+
+  // Users
+  const passwordHash = await bcrypt.hash('password123', 10);
+  
+  for (const u of data.users) {
+     await prisma.user.upsert({
+         where: { id: u.id },
+         update: {
+             passwordHash: passwordHash,
+             name: u.name,
+             email: u.email,
+             role: u.role as any
+         },
+         create: {
+             id: u.id,
+             tenantId: u.tenantId,
+             name: u.name,
+             email: u.email,
+             passwordHash: passwordHash,
+             role: u.role as any,
+             permissions: u.permissions
+         }
+     });
+  }
+
+  // Accounts
+  for (const acc of data.accounts) {
+    await prisma.account.upsert({
+        where: { id: acc.id },
+        update: {},
+        create: {
+            id: acc.id,
+            tenantId: acc.tenantId,
+            name: acc.name,
+            accountCode: acc.accountCode,
+            type: acc.type as any,
+            balance: acc.balance
+        }
+    });
+  }
+
+  // Products
+  for (const p of data.products) {
+      await prisma.product.upsert({
+          where: { id: p.id },
+          update: {},
+          create: {
+              id: p.id,
+              tenantId: p.tenantId,
+              name: p.name,
+              code: p.code,
+              stockQuantity: p.stockQuantity,
+              priceSell: p.priceSell,
+              trackStock: p.trackStock
+          }
+      });
+  }
+
+  // Cash Registers
+  for (const cr of data.cashRegisters) {
+      await prisma.cashRegister.upsert({
+          where: { id: cr.id },
+          update: {},
+          create: {
+              id: cr.id,
+              tenantId: cr.tenantId,
+              name: cr.name,
+              currency: cr.currency,
+              balance: cr.balance
+          }
+      });
+  }
+
+  // Invoices
+  for (const inv of data.invoices) {
+      const exists = await prisma.invoice.findUnique({ where: { id: inv.id }});
+      if(!exists) {
+          await prisma.invoice.create({
+              data: {
+                  id: inv.id,
+                  tenantId: inv.tenantId,
+                  accountId: inv.accountId,
+                  type: inv.type as any,
+                  status: inv.status as any,
+                  totalAmount: inv.totalAmount,
+                  items: {
+                      create: inv.items.map(item => ({
+                          productId: item.productId,
+                          name: item.name || "", // Fix for undefined name
+                          quantity: item.quantity,
+                          price: item.price,
+                          total: item.total
+                      }))
+                  }
+              }
+          });
+      }
+  }
+
+  // Transactions
+  for (const trx of data.transactions) {
+      const exists = await prisma.transaction.findUnique({ where: { id: trx.id }});
+      if(!exists) {
+        await prisma.transaction.create({
+            data: {
+                id: trx.id,
+                tenantId: trx.tenantId,
+                registerId: trx.registerId,
+                accountId: trx.accountId,
+                type: trx.type as any,
+                amount: trx.amount,
+                description: trx.description,
+                invoiceId: (trx as any).invoiceId
+            } as any
+        });
+      }
+  }
+
+  // Service Tickets
+  for (const srv of data.serviceTickets) {
+      const exists = await prisma.serviceTicket.findUnique({ where: { id: srv.id }});
+      if(!exists) {
+          await prisma.serviceTicket.create({
+              data: {
+                  id: srv.id,
+                  tenantId: srv.tenantId,
+                  customerId: srv.customerId,
+                  deviceInfo: srv.deviceInfo,
+                  status: srv.status as any,
+                  estimatedCost: srv.estimatedCost
+              }
+          });
+      }
+  }
+
+  console.log('Seeding finished.');
+}
+
+main()
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });

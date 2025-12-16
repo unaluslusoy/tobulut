@@ -1,0 +1,7 @@
+[
+  { "id": "PRD-001", "code": "LT-2024", "name": "Laptop Pro X1", "category": "Elektronik", "stock": 12, "minStock": 15, "price": 24000, "status": "active" },
+  { "id": "PRD-002", "code": "MS-500", "name": "Kablosuz Mouse", "category": "Aksesuar", "stock": 85, "minStock": 20, "price": 450, "status": "active" },
+  { "id": "PRD-003", "code": "KB-mech", "name": "Mekanik Klavye", "category": "Aksesuar", "stock": 5, "minStock": 10, "price": 1200, "status": "active" },
+  { "id": "PRD-004", "code": "MN-27", "name": "27\" 4K Monitör", "category": "Elektronik", "stock": 8, "minStock": 5, "price": 8500, "status": "active" },
+  { "id": "PRD-005", "code": "USB-C-Hub", "name": "USB-C Hub 7-in-1", "category": "Aksesuar", "stock": 42, "minStock": 30, "price": 890, "status": "active" }
+]

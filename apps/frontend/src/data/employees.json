@@ -1,0 +1,6 @@
+[
+  { "id": "EMP-001", "name": "Ahmet Yılmaz", "position": "Kıdemli Yazılımcı", "department": "Bilgi İşlem", "status": "active", "joinDate": "2022-03-15", "avatar": "https://picsum.photos/100/100?random=1" },
+  { "id": "EMP-002", "name": "Ayşe Demir", "position": "İK Müdürü", "department": "İnsan Kaynakları", "status": "active", "joinDate": "2021-06-01", "avatar": "https://picsum.photos/100/100?random=2" },
+  { "id": "EMP-003", "name": "Mehmet Öz", "position": "Satış Temsilcisi", "department": "Satış", "status": "on_leave", "joinDate": "2023-01-10", "avatar": "https://picsum.photos/100/100?random=3" },
+  { "id": "EMP-004", "name": "Zeynep Kaya", "position": "Muhasebeci", "department": "Finans", "status": "active", "joinDate": "2020-11-20", "avatar": "https://picsum.photos/100/100?random=4" }
+]

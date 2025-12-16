@@ -1,0 +1,97 @@
+import { Injectable, Logger, InternalServerErrorException } from '@nestjs/common';
+import * as nodemailer from 'nodemailer';
+
+@Injectable()
+export class MailService {
+    private transporter: nodemailer.Transporter;
+    private readonly logger = new Logger(MailService.name);
+
+    constructor() {
+        if (process.env.SMTP_HOST) {
+            this.transporter = nodemailer.createTransport({
+                host: process.env.SMTP_HOST,
+                port: Number(process.env.SMTP_PORT) || 587,
+                secure: false, // true for 465, false for other ports
+                auth: {
+                    user: process.env.SMTP_USER,
+                    pass: process.env.SMTP_PASS,
+                },
+            });
+        }
+    }
+
+    async sendPasswordResetEmail(email: string, token: string) {
+        if (!this.transporter) {
+            this.logger.warn('SMTP config not found. Using Mock Mode.');
+            this.logger.log(`[MOCK EMAIL] To: ${email}, Token: ${token}`);
+            return true;
+        }
+
+        const resetLink = `http://localhost:3000/#/reset-password?token=${token}`; // TODO: Use env var for frontend URL
+        
+        const htmlContent = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <style>
+                body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; }
+                .container { max-width: 600px; margin: 40px auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+                .header { background-color: #ffffff; padding: 40px 0; text-align: center; border-bottom: 1px solid #edf2f7; }
+                .logo { font-size: 28px; font-weight: 800; color: #0f172a; text-decoration: none; letter-spacing: -0.5px; }
+                .logo span { color: #3b82f6; }
+                .content { padding: 40px 48px; color: #475569; line-height: 1.6; }
+                .h1 { font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 24px; text-align: center; }
+                .text { margin-bottom: 24px; font-size: 16px; }
+                .button-container { text-align: center; margin: 32px 0; }
+                .button { background-color: #3b82f6; color: #ffffff; padding: 14px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px; display: inline-block; box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25); }
+                .footer { background-color: #f8fafc; padding: 24px; text-align: center; font-size: 12px; color: #94a3b8; border-top: 1px solid #edf2f7; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <a href="#" class="logo">To<span>Bulut</span></a>
+                </div>
+                <div class="content">
+                    <h1 class="h1">Şifre Sıfırlama İsteği</h1>
+                    <p class="text">Merhaba,</p>
+                    <p class="text">ToBulut hesabınız için bir şifre sıfırlama talebi aldık. Şifrenizi yenilemek için aşağıdaki butona tıklayabilirsiniz:</p>
+                    
+                    <div class="button-container">
+                        <a href="${resetLink}" class="button">Şifremi Sıfırla</a>
+                    </div>
+                    
+                    <p class="text" style="font-size: 14px; color: #64748b;">
+                        Bu bağlantı güvenliğiniz için <strong>15 dakika</strong> sonra geçerliliğini yitirecektir.
+                    </p>
+                    <p class="text" style="margin-top: 24px; padding-top: 24px; border-top: 1px solid #e2e8f0; font-size: 14px;">
+                        Eğer bu talebi siz yapmadıysanız, bu e-postayı görmezden gelebilirsiniz. Hesabınız güvende kalmaya devam edecektir.
+                    </p>
+                </div>
+                <div class="footer">
+                    &copy; ${new Date().getFullYear()} ToBulut Bilişim Sistemleri. Tüm hakları saklıdır.<br>
+                    Bu e-posta otomatik olarak gönderilmiştir, lütfen cevaplamayınız.
+                </div>
+            </div>
+        </body>
+        </html>
+        `;
+
+        const mailOptions = {
+            from: `"ToBulut Destek" <${process.env.MAIL_FROM || 'no-reply@tobulut.com'}>`,
+            to: email,
+            subject: "ToBulut Hesabınız İçin Şifre Sıfırlama",
+            html: htmlContent,
+        };
+
+        try {
+            const info = await this.transporter.sendMail(mailOptions);
+            this.logger.log(`Password reset email sent to ${email} (MessageId: ${info.messageId})`);
+            return true;
+        } catch (error) {
+            this.logger.error(`Failed to send email to ${email}`, error.stack);
+            throw new InternalServerErrorException('E-posta servisi şu anda yanıt vermiyor. Lütfen daha sonra tekrar deneyiniz.');
+        }
+    }
+}
