@@ -1,0 +1,1 @@
+{"version":3,"file":"hr.module.js","sourceRoot":"","sources":["../../../../src/modules/hr/hr.module.ts"],"names":[],"mappings":";;;;;;;;;AACA,2CAAwC;AACxC,6CAAyC;AACzC,mDAA+C;AAC/C,gEAA4D;AAMrD,IAAM,QAAQ,GAAd,MAAM,QAAQ;CAAG,CAAA;AAAX,4BAAQ;mBAAR,QAAQ;IAJpB,IAAA,eAAM,EAAC;QACN,WAAW,EAAE,CAAC,4BAAY,CAAC;QAC3B,SAAS,EAAE,CAAC,sBAAS,EAAE,8BAAa,CAAC;KACtC,CAAC;GACW,QAAQ,CAAG"}

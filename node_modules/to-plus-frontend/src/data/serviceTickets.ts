@@ -1,0 +1,12 @@
+
+import { ServiceTicket } from '../types';
+
+const serviceTickets: ServiceTicket[] = [
+  { "id": "SRV-1001", "tenantId": "tenant-1", "customerName": "Ali Veli", "device": "MacBook Pro 2021", "issue": "Ekran kırık, görüntü gelmiyor", "status": "in_progress", "priority": "high", "technician": "Ahmet Yılmaz", "entryDate": "2024-12-05", "estimatedCost": 5500 },
+  { "id": "SRV-1002", "tenantId": "tenant-1", "customerName": "ABC Mimarlık", "device": "HP Plotter T200", "issue": "Kağıt sıkıştırıyor", "status": "pending", "priority": "medium", "technician": "Henüz Atanmadı", "entryDate": "2024-12-06", "estimatedCost": 1200 },
+  { "id": "SRV-1003", "tenantId": "tenant-1", "customerName": "Ayşe Yılmaz", "device": "iPhone 13", "issue": "Pil değişimi", "status": "completed", "priority": "low", "technician": "Mehmet Öz", "entryDate": "2024-12-04", "estimatedCost": 2500 },
+  { "id": "SRV-1004", "tenantId": "tenant-1", "customerName": "Mehmet Demir", "device": "Lenovo ThinkPad", "issue": "Sıvı teması, açılmıyor", "status": "in_progress", "priority": "high", "technician": "Ahmet Yılmaz", "entryDate": "2024-12-06", "estimatedCost": 4000 },
+  { "id": "SRV-1005", "tenantId": "tenant-1", "customerName": "XYZ Lojistik", "device": "Barkod Yazıcı", "issue": "Baskı silik çıkıyor", "status": "delivered", "priority": "medium", "technician": "Ahmet Yılmaz", "entryDate": "2024-12-01", "estimatedCost": 750 }
+];
+
+export default serviceTickets;
