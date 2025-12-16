@@ -1,0 +1,648 @@
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2025-12-16T21:09:28.174Z"}
+{"context":"MailService","level":"info","message":"SMTP configured: smtp.yandex.com:465 (secure: true)","timestamp":"2025-12-16T21:09:28.186Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2025-12-16T21:09:28.198Z"}
+{"context":"InstanceLoader","level":"info","message":"MailModule dependencies initialized","timestamp":"2025-12-16T21:09:28.198Z"}
+{"context":"InstanceLoader","level":"info","message":"MulterModule dependencies initialized","timestamp":"2025-12-16T21:09:28.198Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2025-12-16T21:09:28.240Z"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","timestamp":"2025-12-16T21:09:28.240Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2025-12-16T21:09:28.240Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2025-12-16T21:09:28.241Z"}
+{"context":"InstanceLoader","level":"info","message":"SaasModule dependencies initialized","timestamp":"2025-12-16T21:09:28.241Z"}
+{"context":"InstanceLoader","level":"info","message":"AdminModule dependencies initialized","timestamp":"2025-12-16T21:09:28.241Z"}
+{"context":"InstanceLoader","level":"info","message":"UploadsModule dependencies initialized","timestamp":"2025-12-16T21:09:28.241Z"}
+{"context":"InstanceLoader","level":"info","message":"ProductsModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"AccountsModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"FinanceModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"InvoicesModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"ServicesModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"HrModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"WebhooksModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"ReportsModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"TasksModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"InventoryModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"OffersModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"SalesModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"CampaignsModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"NotificationsModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"SuperAdminModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2025-12-16T21:09:28.242Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:","timestamp":"2025-12-16T21:09:28.414Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route","timestamp":"2025-12-16T21:09:28.415Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/forgot-password, POST} route","timestamp":"2025-12-16T21:09:28.415Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/reset-password, POST} route","timestamp":"2025-12-16T21:09:28.415Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/verify-2fa, POST} route","timestamp":"2025-12-16T21:09:28.416Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/generate-2fa, POST} route","timestamp":"2025-12-16T21:09:28.416Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/enable-2fa, POST} route","timestamp":"2025-12-16T21:09:28.416Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/update-profile, POST} route","timestamp":"2025-12-16T21:09:28.416Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/change-password, POST} route","timestamp":"2025-12-16T21:09:28.416Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/initiate-whatsapp-2fa, POST} route","timestamp":"2025-12-16T21:09:28.416Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/verify-whatsapp-2fa, POST} route","timestamp":"2025-12-16T21:09:28.416Z"}
+{"context":"RoutesResolver","level":"info","message":"ProductsController {/api/products}:","timestamp":"2025-12-16T21:09:28.416Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products, POST} route","timestamp":"2025-12-16T21:09:28.417Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products, GET} route","timestamp":"2025-12-16T21:09:28.417Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products/:id, GET} route","timestamp":"2025-12-16T21:09:28.417Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.417Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.417Z"}
+{"context":"RoutesResolver","level":"info","message":"AccountsController {/api/accounts}:","timestamp":"2025-12-16T21:09:28.417Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts, POST} route","timestamp":"2025-12-16T21:09:28.417Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts, GET} route","timestamp":"2025-12-16T21:09:28.417Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts/:id, GET} route","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RoutesResolver","level":"info","message":"FinanceController {/api/transactions}:","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/transactions, GET} route","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/transactions, POST} route","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/transactions/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RoutesResolver","level":"info","message":"InvoicesController {/api/invoices}:","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices, POST} route","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices, GET} route","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices/:id, GET} route","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RoutesResolver","level":"info","message":"ServicesController {/api/service-tickets}:","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets, POST} route","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets, GET} route","timestamp":"2025-12-16T21:09:28.418Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RoutesResolver","level":"info","message":"HrController {/api}:","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, GET} route","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, POST} route","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payrolls, GET} route","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payrolls/generate, POST} route","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payrolls/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/leaves, GET} route","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/leaves, POST} route","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RoutesResolver","level":"info","message":"SaasController {/api}:","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/packages, GET} route","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/packages, POST} route","timestamp":"2025-12-16T21:09:28.419Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/packages/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tenants, GET} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tenants, POST} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/support-tickets, GET} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/support-tickets/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments, GET} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RoutesResolver","level":"info","message":"WebhooksController {/api/webhooks}:","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/webhooks, GET} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/webhooks, POST} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/webhooks/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RoutesResolver","level":"info","message":"ReportsController {/api/reports}:","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reports/dashboard, GET} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, GET} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, POST} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.420Z"}
+{"context":"RoutesResolver","level":"info","message":"TasksController {/api/tasks}:","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks, GET} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks, POST} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RoutesResolver","level":"info","message":"InventoryController {/api/inventory}:","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections, GET} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections, POST} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/stock-counts, GET} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/stock-counts, POST} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/stock-counts/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/purchase-orders, GET} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/purchase-orders, POST} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/purchase-orders/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/transfers, GET} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/transfers, POST} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/transfers/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.421Z"}
+{"context":"RoutesResolver","level":"info","message":"OffersController {/api/offers}:","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers, GET} route","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers, POST} route","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RoutesResolver","level":"info","message":"SalesController {/api/sales}:","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns, GET} route","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns, POST} route","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns/:id, PATCH} route","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/offers/:id/convert, POST} route","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RoutesResolver","level":"info","message":"CampaignsController {/api/campaigns}:","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/campaigns, GET} route","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/campaigns, POST} route","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/campaigns/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RoutesResolver","level":"info","message":"NotificationsController {/api/notifications}:","timestamp":"2025-12-16T21:09:28.422Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications, GET} route","timestamp":"2025-12-16T21:09:28.424Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications/:id/read, POST} route","timestamp":"2025-12-16T21:09:28.424Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications/read-all, POST} route","timestamp":"2025-12-16T21:09:28.424Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.424Z"}
+{"context":"RoutesResolver","level":"info","message":"AdminController {/api/admin}:","timestamp":"2025-12-16T21:09:28.424Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/seed, POST} route","timestamp":"2025-12-16T21:09:28.425Z"}
+{"context":"RoutesResolver","level":"info","message":"UploadsController {/api/uploads}:","timestamp":"2025-12-16T21:09:28.425Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/uploads/:folder, POST} route","timestamp":"2025-12-16T21:09:28.425Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/uploads/admin/list, POST} route","timestamp":"2025-12-16T21:09:28.425Z"}
+{"context":"RoutesResolver","level":"info","message":"SuperAdminController {/api/super-admin}:","timestamp":"2025-12-16T21:09:28.425Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/dashboard, GET} route","timestamp":"2025-12-16T21:09:28.425Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants, GET} route","timestamp":"2025-12-16T21:09:28.425Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants/:id, GET} route","timestamp":"2025-12-16T21:09:28.425Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants, POST} route","timestamp":"2025-12-16T21:09:28.425Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants/:id, PUT} route","timestamp":"2025-12-16T21:09:28.425Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.425Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/packages, GET} route","timestamp":"2025-12-16T21:09:28.425Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/packages, POST} route","timestamp":"2025-12-16T21:09:28.425Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/payments, GET} route","timestamp":"2025-12-16T21:09:28.426Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tickets, GET} route","timestamp":"2025-12-16T21:09:28.426Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tickets/:id, PUT} route","timestamp":"2025-12-16T21:09:28.426Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles, GET} route","timestamp":"2025-12-16T21:09:28.426Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles, POST} route","timestamp":"2025-12-16T21:09:28.426Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles/:id, PUT} route","timestamp":"2025-12-16T21:09:28.426Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.426Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users, GET} route","timestamp":"2025-12-16T21:09:28.426Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users, POST} route","timestamp":"2025-12-16T21:09:28.426Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users/:id, PUT} route","timestamp":"2025-12-16T21:09:28.426Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users/:id, DELETE} route","timestamp":"2025-12-16T21:09:28.426Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2025-12-16T21:09:35.302Z"}
+{"clientVersion":"5.22.0","code":"P2003","context":"ExceptionsHandler","error":{"clientVersion":"5.22.0","code":"P2003","meta":{"field_name":"accounts_tenant_id_fkey (index)","modelName":"Tenant"},"name":"PrismaClientKnownRequestError"},"level":"error","message":"\nInvalid `this.prisma.tenant.delete()` invocation in\n/Users/unal/Projeler/to-plus/apps/backend/src/modules/super-admin/super-admin.service.ts:135:39\n\n  132 });\n  133 \n  134 // Then delete the tenant\n→ 135 return this.prisma.tenant.delete(\nForeign key constraint violated: `accounts_tenant_id_fkey (index)`","meta":{"field_name":"accounts_tenant_id_fkey (index)","modelName":"Tenant"},"stack":["PrismaClientKnownRequestError: \nInvalid `this.prisma.tenant.delete()` invocation in\n/Users/unal/Projeler/to-plus/apps/backend/src/modules/super-admin/super-admin.service.ts:135:39\n\n  132 });\n  133 \n  134 // Then delete the tenant\n→ 135 return this.prisma.tenant.delete(\nForeign key constraint violated: `accounts_tenant_id_fkey (index)`\n    at $n.handleRequestError (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:121:7315)\n    at $n.handleAndLogRequestError (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:121:6623)\n    at $n.request (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:121:6307)\n    at async l (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:130:9633)\n    at async /Users/unal/Projeler/to-plus/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /Users/unal/Projeler/to-plus/node_modules/@nestjs/core/router/router-proxy.js:9:17"],"timestamp":"2025-12-16T21:10:02.603Z"}
+{"clientVersion":"5.22.0","code":"P2003","context":"ExceptionsHandler","error":{"clientVersion":"5.22.0","code":"P2003","meta":{"field_name":"accounts_tenant_id_fkey (index)","modelName":"Tenant"},"name":"PrismaClientKnownRequestError"},"level":"error","message":"\nInvalid `this.prisma.tenant.delete()` invocation in\n/Users/unal/Projeler/to-plus/apps/backend/src/modules/super-admin/super-admin.service.ts:135:39\n\n  132 });\n  133 \n  134 // Then delete the tenant\n→ 135 return this.prisma.tenant.delete(\nForeign key constraint violated: `accounts_tenant_id_fkey (index)`","meta":{"field_name":"accounts_tenant_id_fkey (index)","modelName":"Tenant"},"stack":["PrismaClientKnownRequestError: \nInvalid `this.prisma.tenant.delete()` invocation in\n/Users/unal/Projeler/to-plus/apps/backend/src/modules/super-admin/super-admin.service.ts:135:39\n\n  132 });\n  133 \n  134 // Then delete the tenant\n→ 135 return this.prisma.tenant.delete(\nForeign key constraint violated: `accounts_tenant_id_fkey (index)`\n    at $n.handleRequestError (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:121:7315)\n    at $n.handleAndLogRequestError (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:121:6623)\n    at $n.request (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:121:6307)\n    at async l (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:130:9633)\n    at async /Users/unal/Projeler/to-plus/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /Users/unal/Projeler/to-plus/node_modules/@nestjs/core/router/router-proxy.js:9:17"],"timestamp":"2025-12-16T21:10:07.094Z"}
+{"clientVersion":"5.22.0","code":"P2003","context":"ExceptionsHandler","error":{"clientVersion":"5.22.0","code":"P2003","meta":{"field_name":"accounts_tenant_id_fkey (index)","modelName":"Tenant"},"name":"PrismaClientKnownRequestError"},"level":"error","message":"\nInvalid `this.prisma.tenant.delete()` invocation in\n/Users/unal/Projeler/to-plus/apps/backend/src/modules/super-admin/super-admin.service.ts:135:39\n\n  132 });\n  133 \n  134 // Then delete the tenant\n→ 135 return this.prisma.tenant.delete(\nForeign key constraint violated: `accounts_tenant_id_fkey (index)`","meta":{"field_name":"accounts_tenant_id_fkey (index)","modelName":"Tenant"},"stack":["PrismaClientKnownRequestError: \nInvalid `this.prisma.tenant.delete()` invocation in\n/Users/unal/Projeler/to-plus/apps/backend/src/modules/super-admin/super-admin.service.ts:135:39\n\n  132 });\n  133 \n  134 // Then delete the tenant\n→ 135 return this.prisma.tenant.delete(\nForeign key constraint violated: `accounts_tenant_id_fkey (index)`\n    at $n.handleRequestError (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:121:7315)\n    at $n.handleAndLogRequestError (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:121:6623)\n    at $n.request (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:121:6307)\n    at async l (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:130:9633)\n    at async /Users/unal/Projeler/to-plus/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /Users/unal/Projeler/to-plus/node_modules/@nestjs/core/router/router-proxy.js:9:17"],"timestamp":"2025-12-16T21:10:54.826Z"}
+{"clientVersion":"5.22.0","code":"P2003","context":"ExceptionsHandler","error":{"clientVersion":"5.22.0","code":"P2003","meta":{"field_name":"accounts_tenant_id_fkey (index)","modelName":"Tenant"},"name":"PrismaClientKnownRequestError"},"level":"error","message":"\nInvalid `this.prisma.tenant.delete()` invocation in\n/Users/unal/Projeler/to-plus/apps/backend/src/modules/super-admin/super-admin.service.ts:135:39\n\n  132 });\n  133 \n  134 // Then delete the tenant\n→ 135 return this.prisma.tenant.delete(\nForeign key constraint violated: `accounts_tenant_id_fkey (index)`","meta":{"field_name":"accounts_tenant_id_fkey (index)","modelName":"Tenant"},"stack":["PrismaClientKnownRequestError: \nInvalid `this.prisma.tenant.delete()` invocation in\n/Users/unal/Projeler/to-plus/apps/backend/src/modules/super-admin/super-admin.service.ts:135:39\n\n  132 });\n  133 \n  134 // Then delete the tenant\n→ 135 return this.prisma.tenant.delete(\nForeign key constraint violated: `accounts_tenant_id_fkey (index)`\n    at $n.handleRequestError (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:121:7315)\n    at $n.handleAndLogRequestError (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:121:6623)\n    at $n.request (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:121:6307)\n    at async l (/Users/unal/Projeler/to-plus/node_modules/@prisma/client/runtime/library.js:130:9633)\n    at async /Users/unal/Projeler/to-plus/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /Users/unal/Projeler/to-plus/node_modules/@nestjs/core/router/router-proxy.js:9:17"],"timestamp":"2025-12-16T21:11:37.531Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2025-12-16T21:12:21.431Z"}
+{"context":"MailService","level":"info","message":"SMTP configured: smtp.yandex.com:465 (secure: true)","timestamp":"2025-12-16T21:12:21.443Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2025-12-16T21:12:21.450Z"}
+{"context":"InstanceLoader","level":"info","message":"MailModule dependencies initialized","timestamp":"2025-12-16T21:12:21.450Z"}
+{"context":"InstanceLoader","level":"info","message":"MulterModule dependencies initialized","timestamp":"2025-12-16T21:12:21.450Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2025-12-16T21:12:21.486Z"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","timestamp":"2025-12-16T21:12:21.486Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2025-12-16T21:12:21.486Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2025-12-16T21:12:21.486Z"}
+{"context":"InstanceLoader","level":"info","message":"SaasModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"AdminModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"UploadsModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"ProductsModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"AccountsModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"FinanceModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"InvoicesModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"ServicesModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"HrModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"WebhooksModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"ReportsModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"TasksModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"InventoryModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"OffersModule dependencies initialized","timestamp":"2025-12-16T21:12:21.487Z"}
+{"context":"InstanceLoader","level":"info","message":"SalesModule dependencies initialized","timestamp":"2025-12-16T21:12:21.488Z"}
+{"context":"InstanceLoader","level":"info","message":"CampaignsModule dependencies initialized","timestamp":"2025-12-16T21:12:21.488Z"}
+{"context":"InstanceLoader","level":"info","message":"NotificationsModule dependencies initialized","timestamp":"2025-12-16T21:12:21.488Z"}
+{"context":"InstanceLoader","level":"info","message":"SuperAdminModule dependencies initialized","timestamp":"2025-12-16T21:12:21.488Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2025-12-16T21:12:21.488Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:","timestamp":"2025-12-16T21:12:21.690Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route","timestamp":"2025-12-16T21:12:21.692Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/forgot-password, POST} route","timestamp":"2025-12-16T21:12:21.692Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/reset-password, POST} route","timestamp":"2025-12-16T21:12:21.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/verify-2fa, POST} route","timestamp":"2025-12-16T21:12:21.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/generate-2fa, POST} route","timestamp":"2025-12-16T21:12:21.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/enable-2fa, POST} route","timestamp":"2025-12-16T21:12:21.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/update-profile, POST} route","timestamp":"2025-12-16T21:12:21.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/change-password, POST} route","timestamp":"2025-12-16T21:12:21.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/initiate-whatsapp-2fa, POST} route","timestamp":"2025-12-16T21:12:21.694Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/verify-whatsapp-2fa, POST} route","timestamp":"2025-12-16T21:12:21.694Z"}
+{"context":"RoutesResolver","level":"info","message":"ProductsController {/api/products}:","timestamp":"2025-12-16T21:12:21.694Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products, POST} route","timestamp":"2025-12-16T21:12:21.694Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products, GET} route","timestamp":"2025-12-16T21:12:21.694Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products/:id, GET} route","timestamp":"2025-12-16T21:12:21.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.695Z"}
+{"context":"RoutesResolver","level":"info","message":"AccountsController {/api/accounts}:","timestamp":"2025-12-16T21:12:21.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts, POST} route","timestamp":"2025-12-16T21:12:21.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts, GET} route","timestamp":"2025-12-16T21:12:21.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts/:id, GET} route","timestamp":"2025-12-16T21:12:21.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.695Z"}
+{"context":"RoutesResolver","level":"info","message":"FinanceController {/api/transactions}:","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/transactions, GET} route","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/transactions, POST} route","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/transactions/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RoutesResolver","level":"info","message":"InvoicesController {/api/invoices}:","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices, POST} route","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices, GET} route","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices/:id, GET} route","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RoutesResolver","level":"info","message":"ServicesController {/api/service-tickets}:","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets, POST} route","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets, GET} route","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RoutesResolver","level":"info","message":"HrController {/api}:","timestamp":"2025-12-16T21:12:21.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, GET} route","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, POST} route","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payrolls, GET} route","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payrolls/generate, POST} route","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payrolls/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/leaves, GET} route","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/leaves, POST} route","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RoutesResolver","level":"info","message":"SaasController {/api}:","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/packages, GET} route","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/packages, POST} route","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/packages/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tenants, GET} route","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tenants, POST} route","timestamp":"2025-12-16T21:12:21.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/support-tickets, GET} route","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/support-tickets/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments, GET} route","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RoutesResolver","level":"info","message":"WebhooksController {/api/webhooks}:","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/webhooks, GET} route","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/webhooks, POST} route","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/webhooks/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RoutesResolver","level":"info","message":"ReportsController {/api/reports}:","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reports/dashboard, GET} route","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, GET} route","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, POST} route","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RoutesResolver","level":"info","message":"TasksController {/api/tasks}:","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks, GET} route","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks, POST} route","timestamp":"2025-12-16T21:12:21.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RoutesResolver","level":"info","message":"InventoryController {/api/inventory}:","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections, GET} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections, POST} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/stock-counts, GET} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/stock-counts, POST} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/stock-counts/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/purchase-orders, GET} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/purchase-orders, POST} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/purchase-orders/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/transfers, GET} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/transfers, POST} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/transfers/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RoutesResolver","level":"info","message":"OffersController {/api/offers}:","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers, GET} route","timestamp":"2025-12-16T21:12:21.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers, POST} route","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RoutesResolver","level":"info","message":"SalesController {/api/sales}:","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns, GET} route","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns, POST} route","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns/:id, PATCH} route","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/offers/:id/convert, POST} route","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RoutesResolver","level":"info","message":"CampaignsController {/api/campaigns}:","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/campaigns, GET} route","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/campaigns, POST} route","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/campaigns/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RoutesResolver","level":"info","message":"NotificationsController {/api/notifications}:","timestamp":"2025-12-16T21:12:21.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications, GET} route","timestamp":"2025-12-16T21:12:21.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications/:id/read, POST} route","timestamp":"2025-12-16T21:12:21.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications/read-all, POST} route","timestamp":"2025-12-16T21:12:21.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.701Z"}
+{"context":"RoutesResolver","level":"info","message":"AdminController {/api/admin}:","timestamp":"2025-12-16T21:12:21.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/seed, POST} route","timestamp":"2025-12-16T21:12:21.705Z"}
+{"context":"RoutesResolver","level":"info","message":"UploadsController {/api/uploads}:","timestamp":"2025-12-16T21:12:21.705Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/uploads/:folder, POST} route","timestamp":"2025-12-16T21:12:21.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/uploads/admin/list, POST} route","timestamp":"2025-12-16T21:12:21.706Z"}
+{"context":"RoutesResolver","level":"info","message":"SuperAdminController {/api/super-admin}:","timestamp":"2025-12-16T21:12:21.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/dashboard, GET} route","timestamp":"2025-12-16T21:12:21.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants, GET} route","timestamp":"2025-12-16T21:12:21.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants/:id, GET} route","timestamp":"2025-12-16T21:12:21.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants, POST} route","timestamp":"2025-12-16T21:12:21.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants/:id, PUT} route","timestamp":"2025-12-16T21:12:21.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/packages, GET} route","timestamp":"2025-12-16T21:12:21.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/packages, POST} route","timestamp":"2025-12-16T21:12:21.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/payments, GET} route","timestamp":"2025-12-16T21:12:21.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tickets, GET} route","timestamp":"2025-12-16T21:12:21.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tickets/:id, PUT} route","timestamp":"2025-12-16T21:12:21.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles, GET} route","timestamp":"2025-12-16T21:12:21.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles, POST} route","timestamp":"2025-12-16T21:12:21.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles/:id, PUT} route","timestamp":"2025-12-16T21:12:21.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users, GET} route","timestamp":"2025-12-16T21:12:21.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users, POST} route","timestamp":"2025-12-16T21:12:21.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users/:id, PUT} route","timestamp":"2025-12-16T21:12:21.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users/:id, DELETE} route","timestamp":"2025-12-16T21:12:21.707Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2025-12-16T21:12:28.642Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2025-12-16T21:17:56.055Z"}
+{"context":"MailService","level":"info","message":"SMTP configured: smtp.yandex.com:465 (secure: true)","timestamp":"2025-12-16T21:17:56.066Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2025-12-16T21:17:56.074Z"}
+{"context":"InstanceLoader","level":"info","message":"MailModule dependencies initialized","timestamp":"2025-12-16T21:17:56.074Z"}
+{"context":"InstanceLoader","level":"info","message":"MulterModule dependencies initialized","timestamp":"2025-12-16T21:17:56.074Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2025-12-16T21:17:56.110Z"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","timestamp":"2025-12-16T21:17:56.110Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2025-12-16T21:17:56.110Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2025-12-16T21:17:56.111Z"}
+{"context":"InstanceLoader","level":"info","message":"SaasModule dependencies initialized","timestamp":"2025-12-16T21:17:56.111Z"}
+{"context":"InstanceLoader","level":"info","message":"AdminModule dependencies initialized","timestamp":"2025-12-16T21:17:56.111Z"}
+{"context":"InstanceLoader","level":"info","message":"UploadsModule dependencies initialized","timestamp":"2025-12-16T21:17:56.111Z"}
+{"context":"InstanceLoader","level":"info","message":"ProductsModule dependencies initialized","timestamp":"2025-12-16T21:17:56.111Z"}
+{"context":"InstanceLoader","level":"info","message":"AccountsModule dependencies initialized","timestamp":"2025-12-16T21:17:56.111Z"}
+{"context":"InstanceLoader","level":"info","message":"FinanceModule dependencies initialized","timestamp":"2025-12-16T21:17:56.111Z"}
+{"context":"InstanceLoader","level":"info","message":"InvoicesModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"InstanceLoader","level":"info","message":"ServicesModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"InstanceLoader","level":"info","message":"HrModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"InstanceLoader","level":"info","message":"WebhooksModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"InstanceLoader","level":"info","message":"ReportsModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"InstanceLoader","level":"info","message":"TasksModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"InstanceLoader","level":"info","message":"InventoryModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"InstanceLoader","level":"info","message":"OffersModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"InstanceLoader","level":"info","message":"SalesModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"InstanceLoader","level":"info","message":"CampaignsModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"InstanceLoader","level":"info","message":"NotificationsModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"InstanceLoader","level":"info","message":"SuperAdminModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2025-12-16T21:17:56.112Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:","timestamp":"2025-12-16T21:17:56.283Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route","timestamp":"2025-12-16T21:17:56.284Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/forgot-password, POST} route","timestamp":"2025-12-16T21:17:56.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/reset-password, POST} route","timestamp":"2025-12-16T21:17:56.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/verify-2fa, POST} route","timestamp":"2025-12-16T21:17:56.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/generate-2fa, POST} route","timestamp":"2025-12-16T21:17:56.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/enable-2fa, POST} route","timestamp":"2025-12-16T21:17:56.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/update-profile, POST} route","timestamp":"2025-12-16T21:17:56.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/change-password, POST} route","timestamp":"2025-12-16T21:17:56.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/initiate-whatsapp-2fa, POST} route","timestamp":"2025-12-16T21:17:56.286Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/verify-whatsapp-2fa, POST} route","timestamp":"2025-12-16T21:17:56.286Z"}
+{"context":"RoutesResolver","level":"info","message":"ProductsController {/api/products}:","timestamp":"2025-12-16T21:17:56.286Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products, POST} route","timestamp":"2025-12-16T21:17:56.286Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products, GET} route","timestamp":"2025-12-16T21:17:56.286Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products/:id, GET} route","timestamp":"2025-12-16T21:17:56.286Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.286Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.286Z"}
+{"context":"RoutesResolver","level":"info","message":"AccountsController {/api/accounts}:","timestamp":"2025-12-16T21:17:56.286Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts, POST} route","timestamp":"2025-12-16T21:17:56.286Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts, GET} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts/:id, GET} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RoutesResolver","level":"info","message":"FinanceController {/api/transactions}:","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/transactions, GET} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/transactions, POST} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/transactions/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RoutesResolver","level":"info","message":"InvoicesController {/api/invoices}:","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices, POST} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices, GET} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices/:id, GET} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RoutesResolver","level":"info","message":"ServicesController {/api/service-tickets}:","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets, POST} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets, GET} route","timestamp":"2025-12-16T21:17:56.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RoutesResolver","level":"info","message":"HrController {/api}:","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, GET} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, POST} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payrolls, GET} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payrolls/generate, POST} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payrolls/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/leaves, GET} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/leaves, POST} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RoutesResolver","level":"info","message":"SaasController {/api}:","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/packages, GET} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/packages, POST} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/packages/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tenants, GET} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tenants, POST} route","timestamp":"2025-12-16T21:17:56.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/support-tickets, GET} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/support-tickets/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments, GET} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RoutesResolver","level":"info","message":"WebhooksController {/api/webhooks}:","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/webhooks, GET} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/webhooks, POST} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/webhooks/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RoutesResolver","level":"info","message":"ReportsController {/api/reports}:","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reports/dashboard, GET} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, GET} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, POST} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RoutesResolver","level":"info","message":"TasksController {/api/tasks}:","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks, GET} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks, POST} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RoutesResolver","level":"info","message":"InventoryController {/api/inventory}:","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections, GET} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections, POST} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/stock-counts, GET} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/stock-counts, POST} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/stock-counts/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/purchase-orders, GET} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/purchase-orders, POST} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/purchase-orders/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/transfers, GET} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/transfers, POST} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/transfers/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RoutesResolver","level":"info","message":"OffersController {/api/offers}:","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers, GET} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers, POST} route","timestamp":"2025-12-16T21:17:56.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.291Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.291Z"}
+{"context":"RoutesResolver","level":"info","message":"SalesController {/api/sales}:","timestamp":"2025-12-16T21:17:56.291Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns, GET} route","timestamp":"2025-12-16T21:17:56.291Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns, POST} route","timestamp":"2025-12-16T21:17:56.291Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns/:id, PATCH} route","timestamp":"2025-12-16T21:17:56.291Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.291Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/offers/:id/convert, POST} route","timestamp":"2025-12-16T21:17:56.291Z"}
+{"context":"RoutesResolver","level":"info","message":"CampaignsController {/api/campaigns}:","timestamp":"2025-12-16T21:17:56.291Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/campaigns, GET} route","timestamp":"2025-12-16T21:17:56.291Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/campaigns, POST} route","timestamp":"2025-12-16T21:17:56.292Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/campaigns/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.292Z"}
+{"context":"RoutesResolver","level":"info","message":"NotificationsController {/api/notifications}:","timestamp":"2025-12-16T21:17:56.292Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications, GET} route","timestamp":"2025-12-16T21:17:56.292Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications/:id/read, POST} route","timestamp":"2025-12-16T21:17:56.292Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications/read-all, POST} route","timestamp":"2025-12-16T21:17:56.292Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.293Z"}
+{"context":"RoutesResolver","level":"info","message":"AdminController {/api/admin}:","timestamp":"2025-12-16T21:17:56.293Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/seed, POST} route","timestamp":"2025-12-16T21:17:56.294Z"}
+{"context":"RoutesResolver","level":"info","message":"UploadsController {/api/uploads}:","timestamp":"2025-12-16T21:17:56.294Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/uploads/:folder, POST} route","timestamp":"2025-12-16T21:17:56.294Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/uploads/admin/list, POST} route","timestamp":"2025-12-16T21:17:56.294Z"}
+{"context":"RoutesResolver","level":"info","message":"SuperAdminController {/api/super-admin}:","timestamp":"2025-12-16T21:17:56.294Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/dashboard, GET} route","timestamp":"2025-12-16T21:17:56.294Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants, GET} route","timestamp":"2025-12-16T21:17:56.294Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants/:id, GET} route","timestamp":"2025-12-16T21:17:56.294Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants, POST} route","timestamp":"2025-12-16T21:17:56.294Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants/:id, PUT} route","timestamp":"2025-12-16T21:17:56.294Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.294Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/packages, GET} route","timestamp":"2025-12-16T21:17:56.294Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/packages, POST} route","timestamp":"2025-12-16T21:17:56.294Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/payments, GET} route","timestamp":"2025-12-16T21:17:56.295Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tickets, GET} route","timestamp":"2025-12-16T21:17:56.295Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tickets/:id, PUT} route","timestamp":"2025-12-16T21:17:56.295Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles, GET} route","timestamp":"2025-12-16T21:17:56.295Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles, POST} route","timestamp":"2025-12-16T21:17:56.295Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles/:id, PUT} route","timestamp":"2025-12-16T21:17:56.295Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.295Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users, GET} route","timestamp":"2025-12-16T21:17:56.295Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users, POST} route","timestamp":"2025-12-16T21:17:56.295Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users/:id, PUT} route","timestamp":"2025-12-16T21:17:56.295Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users/:id, DELETE} route","timestamp":"2025-12-16T21:17:56.295Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2025-12-16T21:18:03.157Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2025-12-16T21:22:48.214Z"}
+{"context":"MailService","level":"info","message":"SMTP configured: smtp.yandex.com:465 (secure: true)","timestamp":"2025-12-16T21:22:48.227Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2025-12-16T21:22:48.236Z"}
+{"context":"InstanceLoader","level":"info","message":"MailModule dependencies initialized","timestamp":"2025-12-16T21:22:48.236Z"}
+{"context":"InstanceLoader","level":"info","message":"MulterModule dependencies initialized","timestamp":"2025-12-16T21:22:48.237Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2025-12-16T21:22:48.274Z"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","timestamp":"2025-12-16T21:22:48.274Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2025-12-16T21:22:48.274Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2025-12-16T21:22:48.275Z"}
+{"context":"InstanceLoader","level":"info","message":"SaasModule dependencies initialized","timestamp":"2025-12-16T21:22:48.275Z"}
+{"context":"InstanceLoader","level":"info","message":"AdminModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"UploadsModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"ProductsModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"AccountsModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"FinanceModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"InvoicesModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"ServicesModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"HrModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"WebhooksModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"ReportsModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"TasksModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"InventoryModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"OffersModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"SalesModule dependencies initialized","timestamp":"2025-12-16T21:22:48.276Z"}
+{"context":"InstanceLoader","level":"info","message":"CampaignsModule dependencies initialized","timestamp":"2025-12-16T21:22:48.277Z"}
+{"context":"InstanceLoader","level":"info","message":"NotificationsModule dependencies initialized","timestamp":"2025-12-16T21:22:48.277Z"}
+{"context":"InstanceLoader","level":"info","message":"SuperAdminModule dependencies initialized","timestamp":"2025-12-16T21:22:48.277Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2025-12-16T21:22:48.277Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:","timestamp":"2025-12-16T21:22:48.453Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route","timestamp":"2025-12-16T21:22:48.454Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/forgot-password, POST} route","timestamp":"2025-12-16T21:22:48.454Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/reset-password, POST} route","timestamp":"2025-12-16T21:22:48.454Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/verify-2fa, POST} route","timestamp":"2025-12-16T21:22:48.455Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/generate-2fa, POST} route","timestamp":"2025-12-16T21:22:48.455Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/enable-2fa, POST} route","timestamp":"2025-12-16T21:22:48.455Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/update-profile, POST} route","timestamp":"2025-12-16T21:22:48.455Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/change-password, POST} route","timestamp":"2025-12-16T21:22:48.455Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/initiate-whatsapp-2fa, POST} route","timestamp":"2025-12-16T21:22:48.455Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/verify-whatsapp-2fa, POST} route","timestamp":"2025-12-16T21:22:48.455Z"}
+{"context":"RoutesResolver","level":"info","message":"ProductsController {/api/products}:","timestamp":"2025-12-16T21:22:48.455Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products, POST} route","timestamp":"2025-12-16T21:22:48.456Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products, GET} route","timestamp":"2025-12-16T21:22:48.456Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products/:id, GET} route","timestamp":"2025-12-16T21:22:48.456Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.456Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/products/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.456Z"}
+{"context":"RoutesResolver","level":"info","message":"AccountsController {/api/accounts}:","timestamp":"2025-12-16T21:22:48.456Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts, POST} route","timestamp":"2025-12-16T21:22:48.456Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts, GET} route","timestamp":"2025-12-16T21:22:48.456Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts/:id, GET} route","timestamp":"2025-12-16T21:22:48.456Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.456Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/accounts/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.456Z"}
+{"context":"RoutesResolver","level":"info","message":"FinanceController {/api/transactions}:","timestamp":"2025-12-16T21:22:48.457Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/transactions, GET} route","timestamp":"2025-12-16T21:22:48.457Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/transactions, POST} route","timestamp":"2025-12-16T21:22:48.457Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/transactions/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.457Z"}
+{"context":"RoutesResolver","level":"info","message":"InvoicesController {/api/invoices}:","timestamp":"2025-12-16T21:22:48.457Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices, POST} route","timestamp":"2025-12-16T21:22:48.457Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices, GET} route","timestamp":"2025-12-16T21:22:48.457Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices/:id, GET} route","timestamp":"2025-12-16T21:22:48.457Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.457Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/invoices/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.457Z"}
+{"context":"RoutesResolver","level":"info","message":"ServicesController {/api/service-tickets}:","timestamp":"2025-12-16T21:22:48.457Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets, POST} route","timestamp":"2025-12-16T21:22:48.457Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets, GET} route","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/service-tickets/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RoutesResolver","level":"info","message":"HrController {/api}:","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, GET} route","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, POST} route","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payrolls, GET} route","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payrolls/generate, POST} route","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payrolls/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/leaves, GET} route","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/leaves, POST} route","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RoutesResolver","level":"info","message":"SaasController {/api}:","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/packages, GET} route","timestamp":"2025-12-16T21:22:48.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/packages, POST} route","timestamp":"2025-12-16T21:22:48.459Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/packages/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.459Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tenants, GET} route","timestamp":"2025-12-16T21:22:48.459Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tenants, POST} route","timestamp":"2025-12-16T21:22:48.459Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/support-tickets, GET} route","timestamp":"2025-12-16T21:22:48.459Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/support-tickets/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.459Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments, GET} route","timestamp":"2025-12-16T21:22:48.459Z"}
+{"context":"RoutesResolver","level":"info","message":"WebhooksController {/api/webhooks}:","timestamp":"2025-12-16T21:22:48.459Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/webhooks, GET} route","timestamp":"2025-12-16T21:22:48.459Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/webhooks, POST} route","timestamp":"2025-12-16T21:22:48.459Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/webhooks/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.459Z"}
+{"context":"RoutesResolver","level":"info","message":"ReportsController {/api/reports}:","timestamp":"2025-12-16T21:22:48.459Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reports/dashboard, GET} route","timestamp":"2025-12-16T21:22:48.459Z"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, GET} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, POST} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RoutesResolver","level":"info","message":"TasksController {/api/tasks}:","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks, GET} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks, POST} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/tasks/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RoutesResolver","level":"info","message":"InventoryController {/api/inventory}:","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections, GET} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections, POST} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/collections/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/stock-counts, GET} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/stock-counts, POST} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/stock-counts/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/purchase-orders, GET} route","timestamp":"2025-12-16T21:22:48.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/purchase-orders, POST} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/purchase-orders/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/transfers, GET} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/transfers, POST} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/inventory/transfers/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RoutesResolver","level":"info","message":"OffersController {/api/offers}:","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers, GET} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers, POST} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/offers/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RoutesResolver","level":"info","message":"SalesController {/api/sales}:","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns, GET} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns, POST} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns/:id, PATCH} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/returns/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sales/offers/:id/convert, POST} route","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RoutesResolver","level":"info","message":"CampaignsController {/api/campaigns}:","timestamp":"2025-12-16T21:22:48.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/campaigns, GET} route","timestamp":"2025-12-16T21:22:48.462Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/campaigns, POST} route","timestamp":"2025-12-16T21:22:48.462Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/campaigns/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.462Z"}
+{"context":"RoutesResolver","level":"info","message":"NotificationsController {/api/notifications}:","timestamp":"2025-12-16T21:22:48.462Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications, GET} route","timestamp":"2025-12-16T21:22:48.462Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications/:id/read, POST} route","timestamp":"2025-12-16T21:22:48.462Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications/read-all, POST} route","timestamp":"2025-12-16T21:22:48.462Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/notifications/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.462Z"}
+{"context":"RoutesResolver","level":"info","message":"AdminController {/api/admin}:","timestamp":"2025-12-16T21:22:48.462Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/seed, POST} route","timestamp":"2025-12-16T21:22:48.462Z"}
+{"context":"RoutesResolver","level":"info","message":"UploadsController {/api/uploads}:","timestamp":"2025-12-16T21:22:48.462Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/uploads/:folder, POST} route","timestamp":"2025-12-16T21:22:48.464Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/uploads/admin/list, POST} route","timestamp":"2025-12-16T21:22:48.464Z"}
+{"context":"RoutesResolver","level":"info","message":"SuperAdminController {/api/super-admin}:","timestamp":"2025-12-16T21:22:48.464Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/dashboard, GET} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants, GET} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants/:id, GET} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants, POST} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants/:id, PUT} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tenants/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/packages, GET} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/packages, POST} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/payments, GET} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tickets, GET} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/tickets/:id, PUT} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles, GET} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles, POST} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles/:id, PUT} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/roles/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users, GET} route","timestamp":"2025-12-16T21:22:48.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users, POST} route","timestamp":"2025-12-16T21:22:48.466Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users/:id, PUT} route","timestamp":"2025-12-16T21:22:48.466Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/super-admin/users/:id, DELETE} route","timestamp":"2025-12-16T21:22:48.466Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2025-12-16T21:22:55.323Z"}

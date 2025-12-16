@@ -360,7 +360,21 @@ export const api = {
           });
           return handleResponse(response);
       },
-      updateTenant: (tenant: any) => updateDocument('super-admin/tenants', tenant),
+      updateTenant: async (id: string, data: any) => {
+          const response = await fetch(`${API_URL}/super-admin/tenants/${id}`, {
+              method: 'PUT',
+              headers: getHeaders(),
+              body: JSON.stringify(data)
+          });
+          return handleResponse(response);
+      },
+      deleteTenant: async (id: string) => {
+          const response = await fetch(`${API_URL}/super-admin/tenants/${id}`, {
+              method: 'DELETE',
+              headers: getHeaders()
+          });
+          return handleResponse(response);
+      },
       getSupportTickets: () => getCollection<SaaSSupportTicket>('super-admin/tickets'),
       updateSupportTicket: (ticket: any) => updateDocument('super-admin/tickets', ticket),
       getPayments: () => getCollection<SaaSPayment>('super-admin/payments'),

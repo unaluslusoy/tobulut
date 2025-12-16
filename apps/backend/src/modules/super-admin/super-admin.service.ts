@@ -69,36 +69,45 @@ export class SuperAdminService {
   async createTenant(data: any) {
       // Validate uniqueness
       const existingEmail = await this.prisma.user.findFirst({
-        where: { email: data.adminEmail }
+        where: { email: data.email } // Changed from data.adminEmail to data.email
       });
       if (existingEmail) throw new BadRequestException('Bu e-posta adresi zaten kullanımda.');
 
-      const hashedPassword = await bcrypt.hash(data.adminPassword, 10);
-
-      // Create Tenant & Admin User Transaction
       return this.prisma.$transaction(async (tx) => {
+          // Check if subscription is indefinite (no end date)
+          const subscriptionEnd = data.isIndefinite ? null : (data.subscriptionEnd ? new Date(data.subscriptionEnd) : new Date(new Date().setFullYear(new Date().getFullYear() + 1)));
+
           const tenant = await tx.tenant.create({
               data: {
                   name: data.companyName,
                   type: data.type || 'corporate',
                   taxNumber: data.taxNumber,
-                  contactEmail: data.contactEmail || data.adminEmail,
+                  taxOffice: data.taxOffice,
+                  contactEmail: data.contactEmail || data.email,
+                  contactPhone: data.phone,
+                  address: data.address ? { fullAddress: data.address } : undefined,
+                  config: data.gsm ? { gsm: data.gsm } : undefined,
                   subscriptionPlanId: data.packageId,
                   status: 'active',
                   subscriptionStart: new Date(),
-                  // 1 Year default for now
-                  subscriptionEnd: new Date(new Date().setFullYear(new Date().getFullYear() + 1)) 
+                  subscriptionEnd: subscriptionEnd
               }
           });
+
+          // Hash password
+          const hashedPassword = await bcrypt.hash(data.password, 10);
 
           const user = await tx.user.create({
               data: {
                   tenantId: tenant.id,
                   name: data.adminName || 'Yönetici',
-                  email: data.adminEmail,
+                  email: data.email, // Admin email
                   passwordHash: hashedPassword,
                   role: 'admin',
-                  isSuperAdmin: false
+                  // Store forcePasswordChange in permissions
+                  permissions: data.forcePasswordChange ? { forcePasswordChange: true } : undefined,
+                  avatar: data.avatar, // Base64 or URL
+                  status: 'active'
               }
           });
 
@@ -106,11 +115,54 @@ export class SuperAdminService {
       });
   }
   
-  async updateTenantStatus(id: string, status: any) {
+  async updateTenant(id: string, data: any) {
+      const updateData: any = {};
+      
+      if (data.name !== undefined) updateData.name = data.name;
+      if (data.type !== undefined) updateData.type = data.type;
+      if (data.taxNumber !== undefined) updateData.taxNumber = data.taxNumber;
+      if (data.contactEmail !== undefined) updateData.contactEmail = data.contactEmail;
+      if (data.status !== undefined) updateData.status = data.status;
+      if (data.packageId !== undefined) updateData.subscriptionPlanId = data.packageId;
+      if (data.subscriptionEnd !== undefined) updateData.subscriptionEnd = new Date(data.subscriptionEnd);
+      
       return this.prisma.tenant.update({
           where: { id },
-          data: { status }
+          data: updateData,
+          include: { subscriptionPackage: true }
       });
+  }
+
+  async deleteTenant(id: string) {
+      // Check if tenant exists first
+      const tenant = await this.prisma.tenant.findUnique({ where: { id } });
+      if (!tenant) {
+          throw new Error('Firma bulunamadı');
+      }
+
+      try {
+          // Hard delete with cascade - delete all related data in transaction
+          return await this.prisma.$transaction(async (tx) => {
+              // Delete all tenant-related data in order (children first)
+              await tx.supportTicket.deleteMany({ where: { tenantId: id } });
+              await tx.serviceTicket.deleteMany({ where: { tenantId: id } });
+              await tx.invoice.deleteMany({ where: { tenantId: id } });
+              await tx.offer.deleteMany({ where: { tenantId: id } });
+              await tx.transaction.deleteMany({ where: { tenantId: id } });
+              await tx.cashRegister.deleteMany({ where: { tenantId: id } });
+              await tx.stockMovement.deleteMany({ where: { tenantId: id } });
+              await tx.product.deleteMany({ where: { tenantId: id } });
+              await tx.account.deleteMany({ where: { tenantId: id } });
+              await tx.employee.deleteMany({ where: { tenantId: id } });
+              await tx.user.deleteMany({ where: { tenantId: id } });
+              
+              // Finally delete the tenant
+              return tx.tenant.delete({ where: { id } });
+          });
+      } catch (error: any) {
+          console.error('Delete tenant error:', error);
+          throw new Error('Firma silinirken bir hata oluştu: ' + error.message);
+      }
   }
 
   // --- PACKAGES ---

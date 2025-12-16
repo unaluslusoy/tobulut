@@ -29,6 +29,16 @@ export class SuperAdminController {
     return this.superAdminService.createTenant(data);
   }
 
+  @Put('tenants/:id')
+  async updateTenant(@Param('id') id: string, @Body() data: any) {
+    return this.superAdminService.updateTenant(id, data);
+  }
+
+  @Delete('tenants/:id')
+  async deleteTenant(@Param('id') id: string) {
+    return this.superAdminService.deleteTenant(id);
+  }
+
   @Get('packages')
   async getPackages() {
     return this.superAdminService.getPackages();

@@ -51,7 +51,7 @@ const Modal: React.FC<ModalProps> = ({
     ? `w-full rounded-t-2xl h-[95vh] ${isOpen ? 'translate-y-0' : 'translate-y-full'}`
     : size === 'full' 
         ? `w-full h-full rounded-none ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`
-        : `relative w-full ${sizeClasses[size]} rounded-2xl mx-4 ${isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`;
+        : `relative w-full ${sizeClasses[size]} max-h-[90vh] rounded-2xl mx-4 ${isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`;
 
   // Dynamic Z-Index based on nesting level
   const zIndexBase = 50 + (level * 10); // Level 1 = 60, Level 2 = 70, etc.
@@ -80,7 +80,7 @@ const Modal: React.FC<ModalProps> = ({
         </div>
 
         {/* Body */}
-        <div className="p-6 overflow-y-auto custom-scrollbar h-full relative text-gray-700 dark:text-gray-300">
+        <div className="p-6 overflow-y-auto custom-scrollbar flex-1 relative text-gray-700 dark:text-gray-300">
           {children}
         </div>
       </div>

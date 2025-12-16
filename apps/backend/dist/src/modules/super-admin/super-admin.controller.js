@@ -33,6 +33,12 @@ let SuperAdminController = class SuperAdminController {
     async createTenant(data) {
         return this.superAdminService.createTenant(data);
     }
+    async updateTenant(id, data) {
+        return this.superAdminService.updateTenant(id, data);
+    }
+    async deleteTenant(id) {
+        return this.superAdminService.deleteTenant(id);
+    }
     async getPackages() {
         return this.superAdminService.getPackages();
     }
@@ -100,6 +106,21 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], SuperAdminController.prototype, "createTenant", null);
+__decorate([
+    (0, common_1.Put)('tenants/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Object]),
+    __metadata("design:returntype", Promise)
+], SuperAdminController.prototype, "updateTenant", null);
+__decorate([
+    (0, common_1.Delete)('tenants/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], SuperAdminController.prototype, "deleteTenant", null);
 __decorate([
     (0, common_1.Get)('packages'),
     __metadata("design:type", Function),

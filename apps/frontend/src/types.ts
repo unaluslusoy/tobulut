@@ -32,11 +32,14 @@ export interface Tenant {
   type?: 'corporate' | 'individual';
   domain?: string;
   taxNumber?: string;
+  taxOffice?: string;
   contactEmail?: string;
   contactPhone?: string;
+  address?: { fullAddress: string; city?: string; district?: string };
+  config?: { gsm?: string; [key: string]: any };
   subscriptionPlanId?: string;
   subscriptionPackage?: SubscriptionPackage;
-  status: 'active' | 'inactive' | 'suspended';
+  status: 'active' | 'inactive' | 'suspended' | 'trial';
   subscriptionStart?: string;
   subscriptionEnd?: string;
   createdAt: string;

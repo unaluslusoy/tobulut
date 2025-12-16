@@ -36,11 +36,8 @@ export declare class SuperAdminService {
         };
     } & {
         id: string;
-        name: string;
-        status: import(".prisma/client").$Enums.TenantStatus;
-        createdAt: Date;
-        updatedAt: Date;
         tag: string;
+        name: string;
         type: import(".prisma/client").$Enums.TenantType;
         taxNumber: string | null;
         taxOffice: string | null;
@@ -48,9 +45,12 @@ export declare class SuperAdminService {
         contactPhone: string | null;
         address: import("@prisma/client/runtime/library").JsonValue | null;
         subscriptionPlanId: string | null;
+        status: import(".prisma/client").$Enums.TenantStatus;
         subscriptionStart: Date | null;
         subscriptionEnd: Date | null;
         config: import("@prisma/client/runtime/library").JsonValue | null;
+        createdAt: Date;
+        updatedAt: Date;
     })[]>;
     getTenant(id: string): Promise<{
         subscriptionPackage: {
@@ -77,28 +77,25 @@ export declare class SuperAdminService {
         users: {
             id: string;
             name: string;
+            status: string;
             email: string;
             role: import(".prisma/client").$Enums.UserRole;
-            status: string;
         }[];
         invoices: {
             id: string;
-            tenantId: string;
+            type: import(".prisma/client").$Enums.InvoiceType;
             status: import(".prisma/client").$Enums.InvoiceStatus;
             createdAt: Date;
             updatedAt: Date;
-            type: import(".prisma/client").$Enums.InvoiceType;
+            tenantId: string;
             accountId: string;
             totalAmount: import("@prisma/client/runtime/library").Decimal;
             dueDate: Date | null;
         }[];
     } & {
         id: string;
-        name: string;
-        status: import(".prisma/client").$Enums.TenantStatus;
-        createdAt: Date;
-        updatedAt: Date;
         tag: string;
+        name: string;
         type: import(".prisma/client").$Enums.TenantType;
         taxNumber: string | null;
         taxOffice: string | null;
@@ -106,18 +103,18 @@ export declare class SuperAdminService {
         contactPhone: string | null;
         address: import("@prisma/client/runtime/library").JsonValue | null;
         subscriptionPlanId: string | null;
+        status: import(".prisma/client").$Enums.TenantStatus;
         subscriptionStart: Date | null;
         subscriptionEnd: Date | null;
         config: import("@prisma/client/runtime/library").JsonValue | null;
+        createdAt: Date;
+        updatedAt: Date;
     }>;
     createTenant(data: any): Promise<{
         tenant: {
             id: string;
-            name: string;
-            status: import(".prisma/client").$Enums.TenantStatus;
-            createdAt: Date;
-            updatedAt: Date;
             tag: string;
+            name: string;
             type: import(".prisma/client").$Enums.TenantType;
             taxNumber: string | null;
             taxOffice: string | null;
@@ -125,24 +122,27 @@ export declare class SuperAdminService {
             contactPhone: string | null;
             address: import("@prisma/client/runtime/library").JsonValue | null;
             subscriptionPlanId: string | null;
+            status: import(".prisma/client").$Enums.TenantStatus;
             subscriptionStart: Date | null;
             subscriptionEnd: Date | null;
             config: import("@prisma/client/runtime/library").JsonValue | null;
+            createdAt: Date;
+            updatedAt: Date;
         };
         user: {
             id: string;
+            name: string | null;
+            status: string;
+            createdAt: Date;
+            updatedAt: Date;
             userNo: number;
             tenantId: string;
-            name: string | null;
             email: string;
             passwordHash: string;
             role: import(".prisma/client").$Enums.UserRole;
             permissions: import("@prisma/client/runtime/library").JsonValue | null;
             bio: string | null;
             avatar: string | null;
-            status: string;
-            createdAt: Date;
-            updatedAt: Date;
             isTwoFactorEnabled: boolean;
             twoFactorMethod: string | null;
             phoneNumber: string | null;
@@ -152,13 +152,32 @@ export declare class SuperAdminService {
             superAdminRoleId: string | null;
         };
     }>;
-    updateTenantStatus(id: string, status: any): Promise<{
+    updateTenant(id: string, data: any): Promise<{
+        subscriptionPackage: {
+            id: string;
+            name: string;
+            createdAt: Date;
+            updatedAt: Date;
+            description: string | null;
+            priceMonthly: import("@prisma/client/runtime/library").Decimal;
+            priceYearly: import("@prisma/client/runtime/library").Decimal;
+            maxUsers: number;
+            maxProducts: number;
+            storageLimit: string;
+            features: import("@prisma/client/runtime/library").JsonValue | null;
+            isPopular: boolean;
+            isActive: boolean;
+            sortOrder: number;
+            isDemo: boolean;
+            demoDuration: number;
+            discountPercentage: import("@prisma/client/runtime/library").Decimal;
+            discountEndDate: Date | null;
+            highlightColor: string | null;
+        };
+    } & {
         id: string;
-        name: string;
-        status: import(".prisma/client").$Enums.TenantStatus;
-        createdAt: Date;
-        updatedAt: Date;
         tag: string;
+        name: string;
         type: import(".prisma/client").$Enums.TenantType;
         taxNumber: string | null;
         taxOffice: string | null;
@@ -166,9 +185,30 @@ export declare class SuperAdminService {
         contactPhone: string | null;
         address: import("@prisma/client/runtime/library").JsonValue | null;
         subscriptionPlanId: string | null;
+        status: import(".prisma/client").$Enums.TenantStatus;
         subscriptionStart: Date | null;
         subscriptionEnd: Date | null;
         config: import("@prisma/client/runtime/library").JsonValue | null;
+        createdAt: Date;
+        updatedAt: Date;
+    }>;
+    deleteTenant(id: string): Promise<{
+        id: string;
+        tag: string;
+        name: string;
+        type: import(".prisma/client").$Enums.TenantType;
+        taxNumber: string | null;
+        taxOffice: string | null;
+        contactEmail: string | null;
+        contactPhone: string | null;
+        address: import("@prisma/client/runtime/library").JsonValue | null;
+        subscriptionPlanId: string | null;
+        status: import(".prisma/client").$Enums.TenantStatus;
+        subscriptionStart: Date | null;
+        subscriptionEnd: Date | null;
+        config: import("@prisma/client/runtime/library").JsonValue | null;
+        createdAt: Date;
+        updatedAt: Date;
     }>;
     getPackages(): Promise<{
         modules: string[];
@@ -202,13 +242,13 @@ export declare class SuperAdminService {
             name: string;
         };
     } & {
+        amount: import("@prisma/client/runtime/library").Decimal;
         id: string;
-        tenantId: string;
         status: string;
         createdAt: Date;
         updatedAt: Date;
         description: string | null;
-        amount: import("@prisma/client/runtime/library").Decimal;
+        tenantId: string;
         date: Date;
     })[]>;
     getSupportTickets(): Promise<({
@@ -217,10 +257,10 @@ export declare class SuperAdminService {
         };
     } & {
         id: string;
-        tenantId: string;
         status: import(".prisma/client").$Enums.TicketStatus;
         createdAt: Date;
         updatedAt: Date;
+        tenantId: string;
         userId: string;
         subject: string;
         message: string;
@@ -229,10 +269,10 @@ export declare class SuperAdminService {
     })[]>;
     updateTicket(id: string, data: any): Promise<{
         id: string;
-        tenantId: string;
         status: import(".prisma/client").$Enums.TicketStatus;
         createdAt: Date;
         updatedAt: Date;
+        tenantId: string;
         userId: string;
         subject: string;
         message: string;
@@ -246,58 +286,58 @@ export declare class SuperAdminService {
     } & {
         id: string;
         name: string;
-        permissions: import("@prisma/client/runtime/library").JsonValue;
         createdAt: Date;
         updatedAt: Date;
         description: string | null;
+        permissions: import("@prisma/client/runtime/library").JsonValue;
     })[]>;
     createRole(data: any): Promise<{
         id: string;
         name: string;
-        permissions: import("@prisma/client/runtime/library").JsonValue;
         createdAt: Date;
         updatedAt: Date;
         description: string | null;
+        permissions: import("@prisma/client/runtime/library").JsonValue;
     }>;
     updateRole(id: string, data: any): Promise<{
         id: string;
         name: string;
-        permissions: import("@prisma/client/runtime/library").JsonValue;
         createdAt: Date;
         updatedAt: Date;
         description: string | null;
+        permissions: import("@prisma/client/runtime/library").JsonValue;
     }>;
     deleteRole(id: string): Promise<{
         id: string;
         name: string;
-        permissions: import("@prisma/client/runtime/library").JsonValue;
         createdAt: Date;
         updatedAt: Date;
         description: string | null;
+        permissions: import("@prisma/client/runtime/library").JsonValue;
     }>;
     getSuperAdmins(): Promise<({
         superAdminRole: {
             id: string;
             name: string;
-            permissions: import("@prisma/client/runtime/library").JsonValue;
             createdAt: Date;
             updatedAt: Date;
             description: string | null;
+            permissions: import("@prisma/client/runtime/library").JsonValue;
         };
     } & {
         id: string;
+        name: string | null;
+        status: string;
+        createdAt: Date;
+        updatedAt: Date;
         userNo: number;
         tenantId: string;
-        name: string | null;
         email: string;
         passwordHash: string;
         role: import(".prisma/client").$Enums.UserRole;
         permissions: import("@prisma/client/runtime/library").JsonValue | null;
         bio: string | null;
         avatar: string | null;
-        status: string;
-        createdAt: Date;
-        updatedAt: Date;
         isTwoFactorEnabled: boolean;
         twoFactorMethod: string | null;
         phoneNumber: string | null;
@@ -308,18 +348,18 @@ export declare class SuperAdminService {
     })[]>;
     createSuperAdmin(data: any): Promise<{
         id: string;
+        name: string | null;
+        status: string;
+        createdAt: Date;
+        updatedAt: Date;
         userNo: number;
         tenantId: string;
-        name: string | null;
         email: string;
         passwordHash: string;
         role: import(".prisma/client").$Enums.UserRole;
         permissions: import("@prisma/client/runtime/library").JsonValue | null;
         bio: string | null;
         avatar: string | null;
-        status: string;
-        createdAt: Date;
-        updatedAt: Date;
         isTwoFactorEnabled: boolean;
         twoFactorMethod: string | null;
         phoneNumber: string | null;
@@ -330,18 +370,18 @@ export declare class SuperAdminService {
     }>;
     updateSuperAdmin(id: string, data: any): Promise<{
         id: string;
+        name: string | null;
+        status: string;
+        createdAt: Date;
+        updatedAt: Date;
         userNo: number;
         tenantId: string;
-        name: string | null;
         email: string;
         passwordHash: string;
         role: import(".prisma/client").$Enums.UserRole;
         permissions: import("@prisma/client/runtime/library").JsonValue | null;
         bio: string | null;
         avatar: string | null;
-        status: string;
-        createdAt: Date;
-        updatedAt: Date;
         isTwoFactorEnabled: boolean;
         twoFactorMethod: string | null;
         phoneNumber: string | null;
@@ -352,18 +392,18 @@ export declare class SuperAdminService {
     }>;
     deleteSuperAdmin(id: string): Promise<{
         id: string;
+        name: string | null;
+        status: string;
+        createdAt: Date;
+        updatedAt: Date;
         userNo: number;
         tenantId: string;
-        name: string | null;
         email: string;
         passwordHash: string;
         role: import(".prisma/client").$Enums.UserRole;
         permissions: import("@prisma/client/runtime/library").JsonValue | null;
         bio: string | null;
         avatar: string | null;
-        status: string;
-        createdAt: Date;
-        updatedAt: Date;
         isTwoFactorEnabled: boolean;
         twoFactorMethod: string | null;
         phoneNumber: string | null;
